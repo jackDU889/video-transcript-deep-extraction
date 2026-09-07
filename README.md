@@ -27,8 +27,8 @@
 ### 1. 克隆并安装依赖
 
 ```bash
-git clone <本仓库地址>
-cd 视频内容文案深度提取
+git clone https://github.com/jackDU889/video-transcript-deep-extraction.git
+cd video-transcript-deep-extraction
 
 # 系统工具（macOS）
 brew install yt-dlp ffmpeg aria2
@@ -229,3 +229,8 @@ analyze.py ──> lib/llm.py         OpenAI兼容 LLM 调用（凭据读自 ~/.
 
 - 所有凭据（SESSDATA、LLM API Key）只存放在用户主目录，代码仓库内无任何硬编码密钥
 - `模型/`、`输出/`、`测试/`、`.venv/`、运行日志均已列入 `.gitignore`，不会进入版本库
+- 请仅对有权访问的内容进行提取，并遵守各平台服务条款；本项目仅供学习研究
+
+## License
+
+[MIT](LICENSE)
