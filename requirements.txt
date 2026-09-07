@@ -1,0 +1,11 @@
+# 核心依赖（全平台通用）
+faster-whisper==1.2.1
+yt-dlp==2026.8.19
+requests==2.34.2
+sherpa-onnx==1.13.7
+numpy==2.5.2
+
+# Apple Silicon GPU 加速转写引擎（首选，速度快约一个数量级）
+# 仅支持 macOS arm64；其他平台请注释掉下面两行，程序会自动回退 faster-whisper(CPU)
+mlx-whisper==0.4.3
+mlx==0.32.2
