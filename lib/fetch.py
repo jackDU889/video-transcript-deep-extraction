@@ -1,6 +1,7 @@
 """视频/音频获取：yt-dlp 封装（元数据探测、短链解析、音频下载）。"""
 import os
 import re
+import uuid
 
 import requests
 
@@ -86,7 +87,7 @@ def probe_meta(url: str, cookies_browser: str = "") -> dict:
                     "webpage_url": url, "probe_error": f"{e} / {e2}"}
 
 
-_BUID = "RANDOM-ANONYMOUS-FINGERPRINT"  # 匿名指纹，仅用于接口风控
+_BUID = f"{str(uuid.uuid4()).upper()}65185infoc"  # 每次启动随机生成的匿名设备指纹，仅用于接口风控
 
 
 def bilibili_direct_audio(bvid: str, outdir: str, sessdata: str = "") -> str:
